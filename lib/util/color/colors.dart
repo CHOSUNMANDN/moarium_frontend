@@ -12,6 +12,12 @@ const SECONDARY_TEXT_COLOR = Color(0xFFD9D9D9);
 // 보조 글자 색상2 : 0xFF000000
 const TERTIARY_TEXT_COLOR = Colors.black;
 
+// 상단 바
+// 상단 바 배경 색상: 0xFFFFFFFF
+const APP_BAR_BACKGROUND_COLOR = Colors.white;
+// 상단 바 글자 색상 : 0xFF000000
+const APP_BAR_TEXT_COLOR = Colors.black;
+
 // 버튼
 // 버튼 배경 색상: 0xFF31C1FF
 const BUTTON_BACKGROUND_COLOR = Color(0xFF31C1FF);

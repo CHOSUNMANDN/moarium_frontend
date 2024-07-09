@@ -23,7 +23,7 @@ class MoaAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       // AppBar 배경색
-      backgroundColor: BACKGROUND_COLOR,
+      backgroundColor: APP_BAR_BACKGROUND_COLOR,
 
       flexibleSpace: SafeArea(
         child: Container(
