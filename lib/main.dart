@@ -1,8 +1,11 @@
+// main.dart
+//
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:moarium_frontend/screens/login/login_screen.dart';
+import 'package:moarium_frontend/util/color/colors.dart';
 
 void main() {
 
@@ -34,10 +37,6 @@ class MyApp extends StatelessWidget {
                 child: child!
             );
           },
-
-          theme: ThemeData(
-            // TODO : 테마 색상 설정
-          ),
 
           // 기본 화면은 Login
           home: const LoginScreen(),
