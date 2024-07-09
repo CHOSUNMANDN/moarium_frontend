@@ -8,15 +8,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:moarium_frontend/util/color/colors.dart';
 
 class MoaAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final Widget leftWidget;
-  final Widget centerWidget;
-  final Widget rightWidget;
+  final Widget leftChild;
+  final Widget centerChild;
+  final List<Widget> rightChildren;
 
   const MoaAppBar({
     Key? key,
-    this.leftWidget = const SizedBox.shrink(),
-    this.centerWidget = const SizedBox.shrink(),
-    this.rightWidget = const SizedBox.shrink(),
+    this.leftChild = const SizedBox.shrink(),
+    this.centerChild = const SizedBox.shrink(),
+    this.rightChildren = const [],
   }) : super(key: key);
 
   @override
@@ -34,17 +34,20 @@ class MoaAppBar extends StatelessWidget implements PreferredSizeWidget {
             children: <Widget>[
               Align(
                 alignment: Alignment.centerLeft,
-                child: leftWidget,
+                child: leftChild,
               ),
 
               Align(
                 alignment: Alignment.center,
-                child: centerWidget,
+                child: centerChild,
               ),
 
               Align(
                 alignment: Alignment.centerRight,
-                child: rightWidget,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: rightChildren,
+                ),
               ),
             ],
           ),
