@@ -7,10 +7,12 @@ import 'package:flutter/material.dart';
 const BACKGROUND_COLOR = Colors.white;
 // 일반 글자 색상: 0xFF8B8B8B
 const PRIMARY_TEXT_COLOR = Color(0xFF8B8B8B);
+// 보조 글자 색상 : 0xFFD9D9D9
+const SECONDARY_TEXT_COLOR = Color(0xFFD9D9D9);
 
 // 버튼
 // 버튼 배경 색상: 0xFF31C1FF
-const BUTTON_COLOR = Color(0xFF31C1FF);
+const BUTTON_BACKGROUND_COLOR = Color(0xFF31C1FF);
 // 버튼 글자 색상: 0xFFFFFFFF
 const BUTTON_TEXT_COLOR = Colors.white;
 
