@@ -5,6 +5,7 @@
 // flutter pakage
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:moarium_frontend/components/molecules/moa_text_button.dart';
 // color 상수
 import 'package:moarium_frontend/util/color/colors.dart';
 // text style 상수
@@ -77,34 +78,24 @@ class LoginScreen extends StatelessWidget {
             Center(
               child: Wrap(
                 alignment: WrapAlignment.center,
+
                 children: [
                   Text(
                     '‘계속하기’를 누르는 것으로 ',
                     style: REGULAR_SMALL.copyWith(color: TERTIARY_TEXT_COLOR),
                   ),
 
-                  TextButton(
-                    onPressed: () {
-                      // TODO : 이용 약관 접속 페이지 구현
-                    },
+                  MoaTextButton(
+                      onPressed: () => {
+                        // TODO : 필수 이용 약관 페이지 구현
+                      },
 
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.zero,
-                      minimumSize: Size(0, 0),
-                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.zero,
-                      ),
-                    ),
-
-                    child: Text(
-                      '필수 이용약관',
+                      message: '필수 이용 약관',
                       style: REGULAR_SMALL.copyWith(
-                          color: TERTIARY_TEXT_COLOR,
-                          decoration: TextDecoration.underline,
-                          decorationColor: TERTIARY_TEXT_COLOR,
-                      ),
-                    ),
+                        color: TERTIARY_TEXT_COLOR,
+                        decoration: TextDecoration.underline,
+                        decorationColor: TERTIARY_TEXT_COLOR,
+                      )
                   ),
 
                   Text(
