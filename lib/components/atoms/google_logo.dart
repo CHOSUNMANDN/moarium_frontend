@@ -12,7 +12,7 @@ class GoogleLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      "assets/logo/google_logo.svg",
+      "assets/image/logo/google_logo.svg",
       height: 24.h,
       width: 24.w,
     );
