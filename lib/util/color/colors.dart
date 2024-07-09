@@ -9,6 +9,8 @@ const BACKGROUND_COLOR = Colors.white;
 const PRIMARY_TEXT_COLOR = Color(0xFF8B8B8B);
 // 보조 글자 색상 : 0xFFD9D9D9
 const SECONDARY_TEXT_COLOR = Color(0xFFD9D9D9);
+// 보조 글자 색상2 : 0xFF000000
+const TERTIARY_TEXT_COLOR = Colors.black;
 
 // 버튼
 // 버튼 배경 색상: 0xFF31C1FF
