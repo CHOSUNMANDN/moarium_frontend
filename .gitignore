@@ -50,3 +50,6 @@ GoogleService-Info.plist
 
 # Ignore Info.plist for iOS
 ios/Runner/Info.plist
+
+# Ignore env
+.env*
