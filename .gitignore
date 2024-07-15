@@ -52,4 +52,4 @@ GoogleService-Info.plist
 ios/Runner/Info.plist
 
 # Ignore env
-.env*
+*.env
