@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+class CustomLogo extends StatelessWidget {
+  final String logo;
+  final double width;
+  final double height;
+
+  const CustomLogo({
+    Key? key,
+    required this.logo,
+    required this.width,
+    required this.height,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SvgPicture.asset(
+      "assets/image/logo/${logo}.svg",
+      width: width,
+      height: height,
+    );
+  }
+}
