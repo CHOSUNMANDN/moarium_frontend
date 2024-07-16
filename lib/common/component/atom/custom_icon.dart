@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'package:moarium_frontend/common/const/color.dart';
+
 class CustomIcon extends StatelessWidget {
   final String icon;
   final double size;
+  final Color customColor;
 
   const CustomIcon({
     Key? key,
     required this.icon,
     required this.size,
+    this.customColor = SECONDARY_TEXT_COLOR,
   }) : super(key: key);
 
   @override
