@@ -19,22 +19,25 @@ void main() async {
 }
 
 class _App extends ConsumerWidget {
-  const _App({Key? key}) : super(key : key);
+  const _App({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
 
-    return MaterialApp.router(
+    return MediaQuery(
+      data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
 
-      theme: ThemeData(
-        fontFamily: 'Inter',
+      child: MaterialApp.router(
+        theme: ThemeData(
+          fontFamily: 'Inter',
+        ),
+
+        debugShowCheckedModeBanner: false,
+        routerDelegate: router.routerDelegate,
+        routeInformationParser: router.routeInformationParser,
+        routeInformationProvider: router.routeInformationProvider,
       ),
-
-      debugShowCheckedModeBanner: false,
-      routerDelegate: router.routerDelegate,
-      routeInformationParser: router.routeInformationParser,
-      routeInformationProvider: router.routeInformationProvider,
     );
   }
 }
