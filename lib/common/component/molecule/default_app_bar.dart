@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:moarium_frontend/common/component/atom/custom_icon.dart';
+import 'package:moarium_frontend/common/component/atom/custom_logo.dart';
 
 import 'package:moarium_frontend/common/const/color.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+class DefaultAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget leftChild;
   final Widget centerChild;
   final List<Widget> rightChildren;
 
-  const CustomAppBar({
+  const DefaultAppBar({
     Key? key,
     this.leftChild = const SizedBox.shrink(),
     this.centerChild = const SizedBox.shrink(),
