@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:moarium_frontend/common/const/color.dart';
 
 import 'package:moarium_frontend/common/provider/go_router.dart';
 
@@ -31,6 +32,7 @@ class _App extends ConsumerWidget {
       child: MaterialApp.router(
         theme: ThemeData(
           fontFamily: 'Inter',
+          primaryColor: TEXTFIELD_CURSOR_COLOR,
         ),
 
         debugShowCheckedModeBanner: false,
