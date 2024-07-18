@@ -32,6 +32,7 @@ class CustomInterceptor extends Interceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
     print('[REQ] [${options.method}] ${options.uri}');
+    // print("[REQUEST DATA] [${options.data}]");
 
     if (options.headers['accessToken'] == 'true') {
       options.headers.remove('accessToken');
@@ -40,7 +41,7 @@ class CustomInterceptor extends Interceptor {
 
       if (token != null) {
         options.headers.addAll({
-          'authorization': 'Bearer $token',
+          'Authorization': 'Bearer $token',
         });
       }
     }
@@ -51,6 +52,7 @@ class CustomInterceptor extends Interceptor {
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
     print('[RES] [${response.requestOptions.method}] ${response.requestOptions.uri}');
+    print('${response.data}');
 
     return super.onResponse(response, handler);
   }
