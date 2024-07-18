@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import 'package:moarium_frontend/login/provider/user_me_provider.dart';
 import 'package:moarium_frontend/login/model/user_model.dart';
+import 'package:moarium_frontend/login/view/login_first_screen.dart';
 import 'package:moarium_frontend/login/view/login_screen.dart';
 
 final authProvider = ChangeNotifierProvider((ref) => AuthNotifier(ref: ref));
@@ -31,6 +32,11 @@ class AuthNotifier extends ChangeNotifier {
       name: LoginScreen.routeName,
       builder: (_, __) => LoginScreen(),
     ),
+    GoRoute(
+      path: '/',
+      name: LoginFirstScreen.routeName,
+      builder: (_, __) => LoginFirstScreen(),
+    ),
   ];
 
   String? redirectLogic(BuildContext context, GoRouterState state) {
@@ -43,7 +49,7 @@ class AuthNotifier extends ChangeNotifier {
     }
 
     if (user is UserModel) {
-      return logginIn || state.uri.toString() == '/splash' ? '/' : null;
+      return logginIn || state.uri.toString() == '/' ? '/' : null;
     }
 
     // UserModelError
