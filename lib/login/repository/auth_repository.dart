@@ -34,30 +34,24 @@ class AuthRepository {
     );
 
     if (response.statusCode == 200) {
-      // 원래 들어가야할 코드
-      //
       // final result = response.data['result'];
       // final loginResponse = LoginResponse.fromJson(result);
+      //
       // return loginResponse;
-
       // 테스트 코드
       //
       // 임시로 토큰을 받아 온다.
-      final response = await dio.post(
+      final testTokenResponse = await dio.post(
         'http://$ip/test/login',
-        data: {'memberId': '1'},
+        data: {'memberId': '10'},
       );
 
-      if (response.statusCode == 200) {
-        final loginResponse = LoginResponse(
-            accessToken: response.data['result']['accessToken'],
-            memberStatus: 'MEMBER',
-        );
+      final resultResponse = LoginResponse(
+        accessToken: testTokenResponse.data['result']['accessToken'],
+        memberStatus: response.data['result']['memberStatus'],
+      );
 
-        return loginResponse;
-      } else {
-        throw Exception('Token exchange failed');
-      }
+      return resultResponse;
     } else {
       throw Exception('Token exchange failed');
     }
