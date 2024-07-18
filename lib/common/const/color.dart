@@ -7,8 +7,10 @@ const BACKGROUND_COLOR = Colors.white;
 const PRIMARY_TEXT_COLOR = Color(0xFF8B8B8B);
 // 보조 글자 색상 : 0xFF000000
 const SECONDARY_TEXT_COLOR = Colors.black;
-// 보조 글자 색상2 : 0xFFD9D9D9
+// 보조 글자 색상2: 0xFFD9D9D9
 const TERTIARY_TEXT_COLOR = Color(0xFFD9D9D9);
+// 경고 글자 색상: 0xFFFF0000
+const ALERT_TEXT_COLOR = Color(0xFFFF0000);
 
 // 상단 바
 // 상단 바 배경 색상: 0xFFFFFFFF
@@ -21,6 +23,10 @@ const APP_BAR_TEXT_COLOR = Colors.black;
 const BUTTON_BACKGROUND_COLOR = Color(0xFF31C1FF);
 // 버튼 글자 색상: 0xFFFFFFFF
 const BUTTON_TEXT_COLOR = Colors.white;
+
+// 입력창
+// 입력창 커서 색상 : 0xFF31C1FF
+const TEXTFIELD_CURSOR_COLOR = Color(0xFF31C1FF);
 
 // 하단 네비게이션 바
 // 하단 네비게이션 바 배경 색상: 0xFFD9D9D9
