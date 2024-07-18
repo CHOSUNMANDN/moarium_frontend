@@ -11,19 +11,13 @@ import 'package:moarium_frontend/common/component/template/default_layout.dart';
 
 import 'package:moarium_frontend/login/provider/user_me_provider.dart';
 
-class LoginScreen extends ConsumerStatefulWidget {
+class LoginScreen extends ConsumerWidget {
   static String get routeName => 'login';
 
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  ConsumerState<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends ConsumerState<LoginScreen> {
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(userMeProvider);
 
     return DefaultLayout(
@@ -32,29 +26,23 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         width: 118.0,
         height: 50.0,
       ),
-
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 32),
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 100),
-
             SizedBox(
               height: 44,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-
                 child: Text(
                   '함께하는 스터디',
                   style: SEMIBOLD_X_LARGE.copyWith(color: SECONDARY_TEXT_COLOR),
                 ),
               ),
             ),
-
             const SizedBox(height: 24),
-
             SizedBox(
               height: 22,
               child: Padding(
@@ -65,9 +53,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 ),
               ),
             ),
-
             Spacer(),
-
             Center(
               child: MediumButton(
                 onPressed: state is UserModelLoading
@@ -75,16 +61,13 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     : () async {
                   await ref.read(userMeProvider.notifier).login();
                 },
-
                 children: [
                   const CustomLogo(
                     logo: 'google_logo',
                     width: 24,
                     height: 24,
                   ),
-
                   const SizedBox(width: 12),
-
                   SizedBox(
                     height: 24,
                     child: Text(
@@ -95,15 +78,11 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 ],
               ),
             ),
-
             const SizedBox(height: 64),
-
             SizedBox(
               height: 44,
-
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-
                 child: Center(
                   child: Wrap(
                     alignment: WrapAlignment.center,
@@ -112,23 +91,19 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         '‘계속하기’를 누르는 것으로 ',
                         style: REGULAR_SMALL.copyWith(color: TERTIARY_TEXT_COLOR),
                       ),
-
                       DefaultTextButton(
                         onPressed: () async {
                           // TODO : 필수 이용 약관 페이지 구현
                           // 임시로 로그 아웃 버튼
                           await ref.read(userMeProvider.notifier).logout();
                         },
-
                         message: '필수 이용 약관',
-
                         style: REGULAR_SMALL.copyWith(
                           color: TERTIARY_TEXT_COLOR,
                           decoration: TextDecoration.underline,
                           decorationColor: TERTIARY_TEXT_COLOR,
                         ),
                       ),
-
                       Text(
                         '에 동의하고 서비스를 이용합니다.',
                         style: REGULAR_SMALL.copyWith(color: TERTIARY_TEXT_COLOR),
@@ -138,7 +113,6 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 ),
               ),
             ),
-
             const SizedBox(height: 16),
           ],
         ),
